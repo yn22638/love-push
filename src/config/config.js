@@ -11,6 +11,7 @@ const START_DAY = '2020/9/12'
 // 每日发送时间
 const SEND_HOUR = 9
 const SEND_MINUTE = 00
+// 情话 api 备份 https://api.mcloc.cn/love/  https://api.vvhan.com/api/love
 // 获取每日情话链接
 const CHP_URL = 'https://api.shadiao.pro/chp'
 // 当地拼音,需要在下面的墨迹天气url确认
