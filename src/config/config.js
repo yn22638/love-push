@@ -3,7 +3,7 @@ const params = {
   appid: 'wx23ad660d6f2f710c',
   secret: 'f1c258e0e81dc0e7960f1eb9debdfc6c',
   touser: 'ooaVN5kI6lms-HZl_moCiMBlJ6Wk',
-  template_id: 'Oloz9Lquy-fh1zazhbaz_2-jBcg_m7Y4YpeW-8kvusU',
+  template_id: '48xlGs6bAPNfehMXgpAtzSyRD2IcGZRJFuDrJJfuTf0',
 }
 
 // 纪念日
@@ -28,12 +28,12 @@ const listConfig = {
     color: '#FF69B4',
   },
   city: {
-    value: '卢龙县',
-    color: '#00FFFF',
+    value: '卢龙县🏡',
+    color: '#A020F0',
   },
   weather: {
     value: '',
-    color: '#8B658B',
+    color: '#F4A460',
   },
   minTemperature: {
     value: '',
@@ -41,20 +41,19 @@ const listConfig = {
   },
   maxTemperature: {
     value: '',
-    color: '	#FF7256',
+    color: '#FF7256',
   },
   loveDate: {
     value: '',
-    color: '#ff9c6e',
+    color: '#00BFFF',
   },
   babyBirthday: {
     value: '',
-    color: '#173177',
+    color: '#FFC125',
   },
-
   txt: {
     value: '',
-    color: '#3C4244',
+    color: '#FFB5C5',
   },
 }
 

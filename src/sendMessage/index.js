@@ -1,4 +1,5 @@
 var axios = require('axios')
+var moment = require('moment')
 const { listConfig, START_DAY } = require('../../src/config/config')
 const { getContent } = require('./getContent')
 const { getWeatherTips, getWeatherData } = require('./getWeatherContent')
@@ -15,26 +16,23 @@ const getAllDataAndSend = (param) => {
   let today = new Date()
   let initDay = new Date(START_DAY)
   let lastDay = Math.floor((today - initDay) / 1000 / 60 / 60 / 24)
-  let todaystr =
-    today.getFullYear() +
-    ' / ' +
-    (today.getMonth() + 1) +
-    ' / ' +
-    today.getDate()
+  listConfig.babyBirthday.value = `距离宝宝的生日还有${20}天🎂 `
 
   const weekDay = today.getDay()
-  listConfig.loveDate.value = lastDay
-  todaystr.splice(/\//g, '-')
+  listConfig.loveDate.value = `今天是我们恋爱的第${lastDay}天🥰`
+  const todaystr = moment().format('YYYY-MM-DD')
   listConfig.nowDate.value = `${todaystr} 星期${week[weekDay]}`
-  listConfig.loveWords.value = `不管哪一天，每一天都是爱你的一天💘`
+  listConfig.loveWords.value = `不管哪一天，每天都是爱你的一天💘`
   return Promise.all([getContent(), getWeatherTips(), getWeatherData()]).then(
     (data) => {
       console.log(data, 'data')
       listConfig.txt.value = data[0].data.text
       const { WeatherImgUrl, WeatherText, Temperature, WindDirection } = data[2]
-      listConfig.weather.value = `${WeatherText}，${WindDirection}，${data[1]}`
-      listConfig.minTemperature.value = Temperature.split('/')[0]
-      listConfig.maxTemperature.value = Temperature.split('/')[1]
+      listConfig.weather.value = `${WeatherText},${WindDirection},${data[1]}🌞`
+      listConfig.minTemperature.value =
+        Temperature.split('/')[0].replace(' ', '') + '😬'
+      listConfig.maxTemperature.value =
+        Temperature.split('/')[1].replace(' ', '') + '🥵'
       return sendMessage(param, listConfig)
     }
   )
