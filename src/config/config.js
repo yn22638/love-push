@@ -3,7 +3,7 @@ const params = {
   appid: 'wx23ad660d6f2f710c',
   secret: 'f1c258e0e81dc0e7960f1eb9debdfc6c',
   touser: 'ooaVN5kI6lms-HZl_moCiMBlJ6Wk',
-  template_id: 'fciXn95RLRlQBl2SA6dMumIbF52EgzbyQNQLCuo3apU',
+  template_id: 'xvcbGOhKlMtPZaKuNxmTx8a0_SrjeXTeL7yH6EfKLTk',
 }
 
 // 纪念日
@@ -11,7 +11,7 @@ const START_DAY = '2020/9/12'
 // 每日发送时间
 const SEND_HOUR = 9
 const SEND_MINUTE = 00
-// 情话 api 备份 https://api.mcloc.cn/love/  https://api.vvhan.com/api/love
+// 情话 api 备份 https://api.mcloc.cn/love/  https://api.vvhan.com/api/love  https://api.shadiao.pro/chp
 // 获取每日情话链接
 const CHP_URL = 'https://api.shadiao.pro/chp'
 // 当地拼音,需要在下面的墨迹天气url确认
@@ -52,9 +52,13 @@ const listConfig = {
     value: '',
     color: '#FFC125',
   },
-  txt: {
+  enText: {
     value: '',
-    color: '#FFB5C5',
+    color: '#CC3299',
+  },
+  zhText: {
+    value: '',
+    color: '#FF1CAE',
   },
 }
 
