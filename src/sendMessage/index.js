@@ -21,16 +21,16 @@ const getAllDataAndSend = (param) => {
   const weekDay = today.getDay()
   listConfig.loveDate.value = `今天是我们恋爱的第${lastDay}天🥰`
   const todaystr = moment().format('YYYY-MM-DD')
-  listConfig.nowDate.value = `${todaystr} 星期${week[weekDay]}`
+  listConfig.nowDate.value = `${todaystr} 星期${week[weekDay]}📆`
   listConfig.loveWords.value = `不管哪一天，每天都是爱你的一天💘`
   return Promise.all([getContent(), getWeatherTips(), getWeatherData()]).then(
     (data) => {
       console.log(data, 'data')
       listConfig.txt.value = data[0].data.text
       const { WeatherImgUrl, WeatherText, Temperature, WindDirection } = data[2]
-      listConfig.weather.value = `${WeatherText},${WindDirection},${data[1]}🌞`
+      listConfig.weather.value = `${WeatherText},${WindDirection},${data[1]}🌈`
       listConfig.minTemperature.value =
-        Temperature.split('/')[0].replace(' ', '') + '😬'
+        Temperature.split('/')[0].replace(' ', '') + '🥶'
       listConfig.maxTemperature.value =
         Temperature.split('/')[1].replace(' ', '') + '🥵'
       return sendMessage(param, listConfig)
