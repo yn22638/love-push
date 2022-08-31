@@ -39,6 +39,7 @@ const getAllDataAndSend = (param) => {
   )
 }
 
+// 调用百度翻译 api 实现中文 -> 英文
 async function translateLoveText(text) {
   const salt = moment().unix()
   const sign = md5(`20220615001249031${text}${salt}iHX_Wz5jsWL3OuAfxXGL`)
