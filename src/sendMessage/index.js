@@ -17,7 +17,7 @@ const getAllDataAndSend = (param) => {
   let today = new Date()
   let initDay = new Date(START_DAY)
   let lastDay = Math.floor((today - initDay) / 1000 / 60 / 60 / 24)
-  listConfig.babyBirthday.value = `距离宝宝的生日还有${20}天🎂 `
+  listConfig.babyBirthday.value = `距离宝宝的生日还有${reckonBirthday()}天🎂 `
   const weekDay = today.getDay()
   listConfig.loveDate.value = `今天是我们恋爱的第${lastDay}天🥰`
   const todaystr = moment().format('YYYY-MM-DD')
@@ -52,6 +52,17 @@ async function translateLoveText(text) {
   const { dst } = trans_result[0]
   // `${dst}\n${src}`
   return dst
+}
+
+// 计算生日
+function reckonBirthday() {
+  let birthdayTime = moment().format('YYYY-') + '12-19'
+  if (moment().unix() >= moment(birthdayTime).unix()) {
+    birthdayTime = moment(birthdayTime).add(1, 'y').format('YYYY-MM-DD')
+  }
+  return parseInt(
+    (moment(birthdayTime).unix() - moment().unix()) / (60 * 60 * 24)
+  )
 }
 
 function sendMessage(data, listConfig) {
