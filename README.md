@@ -21,3 +21,19 @@ npm start
 https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
 
 
+## 测试模板
+```
+{{nowDate.DATA}} 城市：{{city.DATA}}
+
+天气： 晴
+
+最低气温： {{low.DATA}}
+
+最高气温： {{high.DATA}}
+
+今天是我们恋爱的 {{loveDate.DATA}} 天
+
+
+{{txt.DATA}}
+```
+
