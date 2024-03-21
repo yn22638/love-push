@@ -1,10 +1,16 @@
 // 微信测试公众号
 const params = {
-  appid: 'wx23ad660d6f2f710c',
-  secret: 'f1c258e0e81dc0e7960f1eb9debdfc6c',
-  touser: 'ooaVN5kI6lms-HZl_moCiMBlJ6Wk',
-  template_id: 'xvcbGOhKlMtPZaKuNxmTx8a0_SrjeXTeL7yH6EfKLTk',
+  ppid: 'wxd179226b0027bccc',
+  secret: 'f7704528a48b1715ffc8a54c083f9f9c',
+  touser: 'oR4tY6mY2y3zoj3YOAXSMWgxCPcM',
+  template_id: 'uCKaj0onj7kDelWu3gXsJ9JE1G6FwY_eUDgSz5CsnTk',
 }
+// const params = {
+//   appid: 'wx23ad660d6f2f710c',
+//   secret: 'f1c258e0e81dc0e7960f1eb9debdfc6c',
+//   touser: 'ooaVN5kI6lms-HZl_moCiMBlJ6Wk',
+//   template_id: 'xvcbGOhKlMtPZaKuNxmTx8a0_SrjeXTeL7yH6EfKLTk',
+// }
 
 // 纪念日
 const START_DAY = '2020/9/12'
